@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,6 +14,40 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+            <h4>Add Reminders</h4>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="New Reminder" aria-label="New Reminder" aria-describedby="basic-addon2">
+                <div class=".input-group-append form-horizontal">
+                  <button class="btn btn-outline-secondary" type="button">Add</button>
+                </div>
+                <div class=".input-group-append form-horizontal">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tags</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Tag 1</a>
+                      <div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Tag 2</a>
+                      <div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Tag 3</a>
+                      <div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Tag 4</a>
+                    </div>
+                </div>
+            </div>
+              <h4>Reminders</h4>
+              <ul class="nav flex-column">
+                <li class="active"><a href="#reminder1">Reminder 1</a></li>
+                <li><a href="#reminder2">Reminder 2</a></li>
+                <li><a href="#reminder3">Reminder 3</a></li>
+                <li><a href="#reminder4">Reminder 4</a></li>
+              </ul><br>
+              
+            </div>
+          <div class="col-md">
+            <h3>Column 2</h3>
+          </div>
+      </div>
 </body>
 </html>
