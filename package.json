@@ -1,0 +1,25 @@
+{
+  "name": "Reminder-Application",
+  "version": "1.0.0",
+  "description": "| Members | Sprint 1 | Sprint 2 |\r | ------- | -------- | -------- |\r | Shagun  | R and D  |          |\r | Ronald  | R and D  |          |\r | David   | R and D  |          |\r | Silvana | R and D  |          |\r | Blake   | R and D  |          |",
+  "main": "Geolocation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ishika18/Reminder-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ishika18/Reminder-Application/issues"
+  },
+  "homepage": "https://github.com/Ishika18/Reminder-Application#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1"
+  }
+}

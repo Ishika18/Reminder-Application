@@ -32,10 +32,12 @@ function darkSkyDataToArray() {
         for(let i = 0; i < 8; i++){
             console.log(myJsonData.data.daily.data[i].precipProbability)
             rainChance[i] = myJsonData.data.daily.data[i].precipProbability;
+            //console.log works but inserting floats into the array doesnt
         }
         
     })
     return(rainChance)
+    //doesn't return anything
 }
 
 darkSkyDataToArray()
