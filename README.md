@@ -4,11 +4,11 @@
 
 | Members | Sprint 1 | Sprint 2 |
 | ------- | -------- | -------- |
-| Shagun  | R and D  |          |
-| Ronald  | R and D  |          |
+| Shagun  | R and D  |  Login Page        |
+| Ronald  | R and D  |  DarkSkyAPI        |
 | David   | R and D  |          |
 | Silvana | R and D  |          |
-| Blake   | R and D  |          |
+| Blake   | R and D  |  Firebase Implimentation        |
 
 [Trello Board](https://trello.com/invite/b/Bf31PkJP/b57518b64f5b2c1cb753b06326ea1366/reminders-application)
 
