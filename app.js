@@ -3,15 +3,7 @@ function mainPage(){
     location.href = "index.html";
 }
 
-// <div class="container">
-//     <p class="draggable" draggable="true">1</p>
-//     <p class="draggable" draggable="true">2</p>
-//     </div>
-//     <div class="container">
-//     <p class="draggable" draggable="true">3</p>
-//     <p class="draggable" draggable="true">4</p>
-//     </div>
-
+// functionality to have andy .draggable class able to dragged and dropped
 const draggableElements = document.querySelectorAll('.draggable');
 const droppableElements = document.querySelectorAll('.droppable');
 
