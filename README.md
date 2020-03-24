@@ -4,8 +4,8 @@
 
 | Members | Sprint 1 | Sprint 2 |
 | ------- | -------- | -------- |
-| Shagun  | R and D  |  Login Functionality |
-| Ronald  | R and D  |  DarkSkyAPI / Backend Development  |
+| Shagun  | R and D  |  Fireabse Authentication / Login / Database |
+| Ronald  | R and D  |  DarkSkyAPI / Backend Development / Database |
 | David   | R and D  |  Landing Page Deliverable  |
 | Silvana | R and D  | Landing Page Deliverable |
 | Blake   | R and D  | Code Merger / EJS Production |
@@ -22,8 +22,8 @@
 
 | Members | Sprint 2 |
 | ------- | -------- |
-| Shagun  | Login Functionality |
-| Ronald  | DarkSkyAPI / Backend Development  |
+| Shagun  | Fireabse Authentication / Login / Database |
+| Ronald  | DarkSkyAPI / Backend Development / Database |
 | David   | Landing Page Deliverable  |
 | Silvana | Landing Page Deliverable |
 | Blake   | Code Merger / EJS Production |
