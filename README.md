@@ -32,7 +32,7 @@
 
 ### Sprint 1 Goals
 
-- Reasearch and Development for the team as whole.
+- Research and Development for the team as whole.
 
 | Members | R and D | 
 | ------- | -------- |
