@@ -28,7 +28,7 @@
 | Silvana | Landing Page Deliverable |
 | Blake   | Code Merger/EJS Production |
 
-## ~~Sprint 1 (Tues March 17) - (Tues, March 24)
+## ~~Sprint 1 (Tues March 17) - (Tues, March 24)~~
 
 ### Sprint 1 Goals
 
