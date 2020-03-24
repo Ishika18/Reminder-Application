@@ -25,6 +25,7 @@ function signUp() {
     promise.catch(e => console.log(e.message));
 
     // login the user after creating the id.
+    login();
 }
 
 function realtimeListener() {
@@ -36,7 +37,7 @@ function realtimeListener() {
             console.log('not logged in');
         }
     })
-    location.href = "index.html";
+    // location.href = "index.html";
 }
 
 // functionality to have andy .draggable class able to dragged and dropped
