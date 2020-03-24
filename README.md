@@ -4,7 +4,7 @@
 
 | Members | Sprint 1 | Sprint 2 |
 | ------- | -------- | -------- |
-| Shagun  | R and D  |  Fireabse Authentication / Login / Database |
+| Shagun  | R and D  |  Firebase Authentication / Login / Database |
 | Ronald  | R and D  |  DarkSkyAPI / Backend Development / Database |
 | David   | R and D  |  Landing Page Deliverable  |
 | Silvana | R and D  | Landing Page Deliverable |
@@ -22,7 +22,7 @@
 
 | Members | Sprint 2 |
 | ------- | -------- |
-| Shagun  | Fireabse Authentication / Login / Database |
+| Shagun  | Firebase Authentication / Login / Database |
 | Ronald  | DarkSkyAPI / Backend Development / Database |
 | David   | Landing Page Deliverable  |
 | Silvana | Landing Page Deliverable |
