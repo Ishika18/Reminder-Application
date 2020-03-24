@@ -20,6 +20,14 @@
 - Complete reminder application protoype for landing page display
 - Merge in base code from example
 
+| Members | Sprint 2 |
+| ------- | -------- |
+| Shagun  | Login Functionality |
+| Ronald  | DarkSkyAPI/Backend Development  |
+| David   | Landing Page Deliverable  |
+| Silvana | Landing Page Deliverable |
+| Blake   | Code Merger/EJS Production |
+
 ## Sprint 1 (Tues March 17) - (Tues, March 24)
 
 ### Sprint 1 Goals
