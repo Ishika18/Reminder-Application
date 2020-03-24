@@ -5,10 +5,10 @@
 | Members | Sprint 1 | Sprint 2 |
 | ------- | -------- | -------- |
 | Shagun  | R and D  |  Login Functionality |
-| Ronald  | R and D  |  DarkSkyAPI/Backend Development  |
+| Ronald  | R and D  |  DarkSkyAPI / Backend Development  |
 | David   | R and D  |  Landing Page Deliverable  |
 | Silvana | R and D  | Landing Page Deliverable |
-| Blake   | R and D  | Code Merger/EJS Production |
+| Blake   | R and D  | Code Merger / EJS Production |
 
 [Trello Board](https://trello.com/invite/b/Bf31PkJP/b57518b64f5b2c1cb753b06326ea1366/reminders-application)
 
@@ -23,16 +23,16 @@
 | Members | Sprint 2 |
 | ------- | -------- |
 | Shagun  | Login Functionality |
-| Ronald  | DarkSkyAPI/Backend Development  |
+| Ronald  | DarkSkyAPI / Backend Development  |
 | David   | Landing Page Deliverable  |
 | Silvana | Landing Page Deliverable |
-| Blake   | Code Merger/EJS Production |
+| Blake   | Code Merger / EJS Production |
 
-## Sprint 1 (Tues March 17) - (Tues, March 24)
+## ~~Sprint 1 (Tues March 17) - (Tues, March 24)~~
 
 ### Sprint 1 Goals
 
-- Reasearch and Development for the team as whole.
+- Research and Development for the team as whole.
 
 | Members | R and D | 
 | ------- | -------- |
