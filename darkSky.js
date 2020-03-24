@@ -14,7 +14,7 @@ let key = '55a1b0aafc740393ca2506b2ab5311dc';
 let uri = darksky + key + '/' + lat +','+ long;
 uri = uri.concat('?units=ca&exclude=minutely,hourly,alerts,flags,currently');
     
-var rainChance = []
+var rainChance = [];
 
 async function getDarkSkyData() {
     try {
@@ -30,14 +30,14 @@ function darkSkyDataToArray() {
     getDarkSkyData().then(function(myJsonData) {
         
         for(let i = 0; i < 8; i++){
-            console.log(myJsonData.data.daily.data[i].precipProbability)
+            console.log(myJsonData.data.daily.data[i].precipProbability);
             rainChance[i] = myJsonData.data.daily.data[i].precipProbability;
             //console.log works but inserting floats into the array doesnt
         }
         
-    })
+    });
     return(rainChance)
     //doesn't return anything
 }
 
-darkSkyDataToArray()
+darkSkyDataToArray();
