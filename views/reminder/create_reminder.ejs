@@ -1,3 +1,6 @@
+<!-- bm - create new reminder -->
+<script rel="app/js" src="./js/create_reminder_ejs.js"></script>
+
 <div class="container">
   <form action="/reminder" method="POST">
     <div class="form-group">
@@ -7,6 +10,13 @@
     <div class="form-group">
       <label for="description">Description</label>
       <textarea class="form-control" id="descriptionInput" rows="3" placeholder="Description" name="description"></textarea>
+
+      date and time picker
+      <div class="md-form mx-5 my-5">
+        <input placeholder="Date and Time" type="text" data-open="picker2" class="form-control date-time picker-opener">
+        <input placeholder="Selected date" type="text" id="picker2"  class="form-control time-date-ghost">
+        <input placeholder="Selected time" data-open="picker2" type="text" class="form-control timepicker time-date-ghost">
+      </div>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

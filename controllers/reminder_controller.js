@@ -5,8 +5,8 @@ let remindersController = {
     res.render('reminder/index', { reminders: Database.cindy.reminders })
   },
 
-  new: (req, res) => {
-    res.render('reminder/create')
+  create: (req, res) => {
+    res.render('reminder/create_reminder')
   },
 
   listOne: (req, res) => {
@@ -15,7 +15,7 @@ let remindersController = {
       return reminder.id == reminderToFind; // good test question for students what happens if I put ===
     })
     if (searchResult != undefined) {
-      res.render('reminder/single-reminder', { reminderItem: searchResult })
+      res.render('reminder/single_reminder', { reminderItem: searchResult })
     } else {
       res.render('reminder/index', { reminders: Database.cindy.reminders })
     }
