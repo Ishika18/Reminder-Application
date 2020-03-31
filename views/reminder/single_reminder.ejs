@@ -1,3 +1,6 @@
+<!-- bm - large view of a single reminder full details, this will be app landing page, of most recent reminder-->
+<script rel="app/js" src="./js/single_reminder_ejs.js"></script>
+
 <div class="container">
   <h1 class="page-header">Reminders</h1>
 
@@ -15,7 +18,7 @@
 
         <a class="btn btn-warning" href=<%= "/reminder/" + reminderItem.id + "/edit" %>>Edit</a>
 
-        <form class="deleteForm "method="POST" action=<%= "/reminder/delete/" + reminderItem.id %>>
+        <form class="deleteForm" method="POST" action=<%= "/reminder/delete/" + reminderItem.id %>>
           <button type="submit" class="btn btn-danger">Delete</button>
         </form>
 
