@@ -25,7 +25,6 @@ app.get("/reminder/create", reminderController.create_reminder);
 // edit a reminder
 app.get("/reminder/edit", reminderController.edit_reminder);
 
-
 app.listen(3000, function(){
   console.log("Server running. Visit: localhost:3000/reminder in your browser 🚀");
 });
