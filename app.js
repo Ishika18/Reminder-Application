@@ -3,7 +3,6 @@ const app = express();
 const ejsLayouts = require("express-ejs-layouts");
 const reminderController = require("./controllers/reminder_controller");
 
-
 app.use(express.static(__dirname + "/public"));
 
 app.use(express.urlencoded({ extended: false }));
