@@ -4,61 +4,68 @@
 <!--    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">-->
 <!--        <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">-->
 <!--    </video>-->
-
-<link rel="stylesheet" href="./css/style_landing.css">
-<link rel="stylesheet" href="./css/login_modal.css">
-<script rel="app/js" src="./js/landing_ejs.js"></script>
+<link rel="text/css" href="./css/style_landing.css">
+<link rel="text/css" href="./css/login_modal.css">
+<script rel="text/javascript" src="../../js/landing_ejs.js"></script>
 
 <!-- bm - including the landing navbar-->
 <% include ../partials/landing_navbar.ejs %>
 
-<div class="container">
-    
-    <div class="jumbotron">
-        <div class="row">
-        <div class="col-md-6">
-            <h1 class="display-3"> Introducing Remindr</h1>
-            <p class="lead">An app to help you be where you need to be, and do what you need to do. </p>
-            <hr class="my-4">
-            </div>
-      <div class="col-md-6">
-          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="height: 500px;width: 500px;">
-              <source src="imgs/rain.mp4" type="video/mp4">
-          </video>
-      </div>
-    </div>
-    </div>
-    
-</div>    
+<header>
+    <div class="container col">
+        <h1 class="display-1">Remindr</h1>
+        <h3 class="display-4">To make sure you're prepared for a night out...</h3>
 
+    </div>
+</header>
+
+<!-- bm - mock ups generated from https://magicmockups.com/-->
 <div class="container">
-  
     <div id="carousel-example-generic" class="carousel slide">
     <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
         </ol>
   
       <!-- Wrapper for slides -->
           <div class="carousel-inner">
               <!-- Slide 1-->
               <div class="item active">
-                  <img src="imgs/slide1.png" alt="Slide 1" />
-                </div>
+                  <img src="/imgs/laptop-mockup1.jpg" alt="Slide 1" />
+                  <div class="carousel-caption">
+                  <!-- caption here if you want-->
+                  </div>
+              </div>
   
               <!-- Slide 2-->
                 <div class="item">
-                    <img src="imgs/slide2.png" alt="Slide 2" />
-                  </div>
+                    <img src="/imgs/laptop-mockup2.jpg" alt="Slide 2" />
+                    <div class="carousel-caption">
+                        <!-- caption here if you want-->
+                    </div>
+                </div>
   
             <!-- Slide 3-->
               <div class="item">
-                  <img src="http://placehold.it/1200x480" alt="Slide 3" />
-                </div>
+                  <img src="/imgs/phone-mockup1.jpg" alt="Slide 3" />
+                  <div class="carousel-caption">
+                      <!-- caption here if you want-->
+                  </div>
+              </div>
+
+              <!-- Slide 4-->
+              <div class="item">
+                  <img src="/imgs/phone-mockup2.jpg" alt="Slide 4" />
+                  <div class="carousel-caption">
+                      <!-- caption here if you want-->
+                  </div>
+              </div>
             </div>
-    
+
+
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
       <span class="icon-prev"></span>
@@ -69,39 +76,4 @@
   </div>
 </div>
 </div>
-<br>
-<br>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-sm-12" >
-        <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="imgs/note.png" alt="Card image cap">
-        <div class="card-body">
-          <h2 class="card-title">It's All In The Details</h2>
-          <p class="card-text"> Remindr allows you to customize your reminders with tags and subtasks.</p>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="imgs/share_icon.png" alt="Card image cap">
-        <div class="card-body">
-          <h2 class="card-title">Share</h2>
-          <p class="card-text">Reminders can be shared with friends and colleagues to ensure everyone gets the memo</p>
-          </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="imgs/weather.png" alt="Card image cap">
-        <div class="card-body">
-          <h2 class="card-title">Be Prepared</h2>
-          <p class="card-text">Remindr integrates weather data to let you know if you need to bring an umbrella along when you run your errands</p>
-          </div>
-      </div>
-    </div>
-   </div>
-    </div>
-  
+</div>
