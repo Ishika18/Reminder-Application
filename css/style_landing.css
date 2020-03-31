@@ -1,5 +1,7 @@
 /*bm - css styling for specifically the landing page*/
-
+body {
+    background-color: gainsboro;
+}
 header {
     position: relative;
     background-color: black;
