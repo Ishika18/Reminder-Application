@@ -1,73 +1,52 @@
 <!-- bm - navbar for landing page-->
 <!-- bm - navbar for inside reminders application -->
-<base href="/">
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="reminder-navbar" style="padding-top: 8px; padding-bottom: 8px;">
-  <div class="container-fluid justify-content-between">
-    <a class="navbar-brand col-2" href="#">
-      <img src="/imgs/remindr-icon.png" width="60" height="60" alt="">
-    </a>
 
-      <!-- bm - -->
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary col-2" data-toggle="modal" data-target="#exampleModalCenter">
-        Login
-      </button>
+<nav class="navbar d-flex bg-white border-bottom border-dark">
+  <img src="/imgs/remindr-icon.png" width="60" height="60" class="d-inline-block p-2" alt="">
+  <a class="navbar-brand p-2 text-dark">Remindr</a>
+  <a class=" btn navbar-brand p-2 ml-auto text-dark" data-toggle="modal" data-target="#loginModal">Login</a>
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
+</nav>
 
-              <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
-              <!-- bm - login from: https://startbootstrap.com/snippets/login/-->
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                    <div class="card card-signin my-5">
-                      <div class="card-body">
-                        <h5 class="card-title text-center">Sign In</h5>
-                        <form class="form-signin">
-                          <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                            <label for="inputEmail">Email address</label>
-                          </div>
+<!-- Modal -->
+<div class="modal fade border-bottom border-dark" id="loginModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="/imgs/remindr-icon.png" width="60" height="60" class="d-inline-block p-2" alt="">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body border-top border-bottom border-dark">
+        <div class="container">
+          <div class="row">
+            <div class="mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body border rounded border-dark">
+                  <form class="form-signin mt-2">
 
-                          <div class="form-label-group">
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                            <label for="inputPassword">Password</label>
-                          </div>
-
-                          <div class="custom-control custom-checkbox mb-3">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Remember password</label>
-                          </div>
-                          <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-                          <hr class="my-4">
-                          <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
-                          <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
-                        </form>
-                      </div>
+                    <div class="form-label-group mt-2 p-2">
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus>
                     </div>
-                  </div>
+
+                    <div class="form-label-group mt-2 p-2">
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                    </div>
+
+                    <button class="btn btn-lg btn-light btn-block text-uppercase mt-2" type="submit" onclick="reminderLogin">Sign in</button>
+                    <hr class="">
+                    <button class="btn btn-lg btn-google btn-light btn-block text-uppercase p-3" type="submit" onclick="googleLogin">
+                      <img src="/imgs/google-icon.png" width="45" height="45" class="d-inline-block p-2" alt="">Sign in with Google</button>
+                    <button class="btn btn-lg btn-facebook btn-light btn-block text-uppercase p-3" type="submit" onclick="facebookLogin">
+                      <img src="/imgs/facebook-icon.png" width="45" height="45" class="d-inline-block p-2" alt="">Sign in with Facebook</button>
+                  </form>
                 </div>
               </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-</nav>
-
-
-
+  </div>
+</div>
