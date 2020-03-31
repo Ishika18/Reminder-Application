@@ -14,19 +14,18 @@ app.set("view engine", "ejs");
 
 // Routes start here
 
-app.get("/", (req, res) => {
-  res.render("reminder/landing")
-});
+// landing page
+app.get("/", reminderController.landing_page);
 
-app.get("/reminder", reminderController.list);
+// single reminder
+app.get("/reminder/single", reminderController.single_reminder);
 
-app.get("/reminder/new", reminderController.new);
+// create a new reminder
+app.get("/reminder/create", reminderController.create_reminder);
 
-app.get("/reminder/:id", reminderController.listOne);
+// edit a reminder
+app.get("/reminder/edit", reminderController.edit_reminder);
 
-app.get("/reminder/:id/edit", reminderController.edit);
-
-app.post("/reminder/", reminderController.create);
 
 app.listen(3000, function(){
   console.log("Server running. Visit: localhost:3000/reminder in your browser 🚀");

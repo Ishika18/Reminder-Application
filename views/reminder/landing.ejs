@@ -4,52 +4,57 @@
 <!--    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">-->
 <!--        <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">-->
 <!--    </video>-->
-
-<link rel="stylesheet" href="./css/style_landing.css">
-<link rel="stylesheet" href="./css/login_modal.css">
-<script rel="app/js" src="./js/landing_ejs.js"></script>
+<link rel="text/css" href="./css/style_landing.css">
+<link rel="text/css" href="./css/login_modal.css">
+<script rel="text/javascript" src="../../js/landing_ejs.js"></script>
 
 <!-- bm - including the landing navbar-->
 <% include ../partials/landing_navbar.ejs %>
 
-<div class="container">
-    
-    <div class="jumbotron">
-        <div class="row">
-        <div class="col-md-6">
-            <h1 class="display-3">Remindr</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-      </div>
-      <div class="col-md-6">
-          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="height: 500px;width: 500px;">
-              <source src="imgs/rain.mp4" type="video/mp4">
-          </video>
-      </div>
+<header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="../../public/imgs/rain.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+                <h1 class="display-3">Remindr</h1>
+                <p class="lead mb-0">To make sure your prepared for a night out...</p>
+            </div>
+        </div>
     </div>
-    </div>
-    
-</div>    
+</header>
 
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are build into Bootstrap 4.</p>
+                <p>The overlay color can be changed by changing the <code>background-color</code> of the <code>.overlay</code> class in the CSS.</p>
+                <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- bm - mock ups generated from https://magicmockups.com/-->
 <div class="container">
-    
     <div id="carousel-example-generic" class="carousel slide">
     <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
         </ol>
   
       <!-- Wrapper for slides -->
           <div class="carousel-inner">
               <!-- Slide 1-->
               <div class="item active">
-                  <img src="http://placehold.it/1200x480" alt="Slide 1" />
+                  <img src="./public/imgs/laptop-mockup1.jpg" alt="Slide 1" />
                   <div class="carousel-caption">
                       <h1>Slide 1</h1>
                       <p>Slide 1 Description</p>
@@ -58,7 +63,7 @@
   
               <!-- Slide 2-->
                 <div class="item">
-                    <img src="http://placehold.it/1200x480" alt="Slide 2" />
+                    <img src="./public/imgs/laptop-mockup2.jpg" alt="Slide 2" />
                     <div class="carousel-caption">
                         <h1>Slide 2</h1>
                         <p>Slide 2 Description</p>
@@ -67,14 +72,24 @@
   
             <!-- Slide 3-->
               <div class="item">
-                  <img src="http://placehold.it/1200x480" alt="Slide 3" />
+                  <img src="./public/imgs/phone-mockup1.jpg" alt="Slide 3" />
+                  <div class="carousel-caption">
+                      <h1>Slide 3</h1>
+                      <p>Slide 3 Description</p>
+                  </div>
+              </div>
+
+              <!-- Slide 4-->
+              <div class="item">
+                  <img src="./public/imgs/phone-mockup1.jpg" alt="Slide 4" />
                   <div class="carousel-caption">
                       <h1>Slide 3</h1>
                       <p>Slide 3 Description</p>
                   </div>
               </div>
             </div>
-    
+
+
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
       <span class="icon-prev"></span>
@@ -84,46 +99,3 @@
     </a>
   </div>
 </div>
-</div>
-<br>
-<br>
-
-<div class="container">
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-    </div>
-   
-    </div>
-  
-// carousel
-// link

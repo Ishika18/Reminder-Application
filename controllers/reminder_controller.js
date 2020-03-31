@@ -1,23 +1,32 @@
 let Database = require("../database");
 
 let remindersController = {
-  list: (req, res) => {
-    res.render('reminder/index', { reminders: Database.cindy.reminders })
+
+  landing_page: (req, res) => {
+    res.render("reminder/landing")
   },
 
-  create: (req, res) => {
+  list: (req, res) => {
+    res.render('reminder/single_reminder', { reminders: Database.cindy.reminders })
+  },
+
+  create_reminder: (req, res) => {
     res.render('reminder/create_reminder')
   },
 
-  listOne: (req, res) => {
+  edit_reminder: (req, res) => {
+    res.render('reminder/edit_reminder')
+  },
+
+  single_reminder: (req, res) => {
     let reminderToFind = req.params.id;
     let searchResult = Database.cindy.reminders.find(function(reminder) {
       return reminder.id == reminderToFind; // good test question for students what happens if I put ===
-    })
+    });
     if (searchResult != undefined) {
       res.render('reminder/single_reminder', { reminderItem: searchResult })
     } else {
-      res.render('reminder/index', { reminders: Database.cindy.reminders })
+      res.render('reminder/single_reminder', { reminders: Database.cindy.reminders })
     }
   },
 
@@ -30,15 +39,6 @@ let remindersController = {
     }
     Database.cindy.reminders.push(reminder);
     res.redirect('/reminder');
-  },
-
-  edit: (req, res) => {
-    let reminderToFind = req.params.id;
-    let searchResult = Database.cindy.reminders.find(function(reminder) {
-      return reminder.id == reminderToFind; // Why do you think I chose NOT to use === here?
-    })
-    res.render('reminder/edit', { reminderItem: searchResult })
-    
   },
 
   update: (req, res) => {
@@ -58,10 +58,10 @@ let remindersController = {
     let reminderToFind = req.params.id;
     let reminderIndex = Database.cindy.reminders.findIndex(function(reminder) {
       return reminder.id == reminderToFind; 
-    })
+    });
     Database.cindy.reminders.splice(reminderIndex, 1);
     res.redirect('/reminder');
   }
-}
+};
 
-module.exports = remindersController
+module.exports = remindersController;
