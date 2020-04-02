@@ -1,0 +1,21 @@
+<!-- bm - listed version of all reminders -->
+<%- include('../partials/app_navbar.ejs'); -%>
+
+<div class="container-flex" style="height:100vh">
+    <div class="container-flex border border-dark px-2 col-md-5 overflow-auto d-none d-md-block" style="height:100vh">
+        <div class="list-group mt-2">
+
+            <% Object.values(reminders).forEach((reminderItem) => { %>
+                <a href="#" class="list-group-item list-group-item-action mb-2 active border border-dark shadow">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1"><%= reminderItem.heading %></h5>
+                        <small><%= reminderItem.datetime %></small>
+                    </div>
+                    <p class="mb-1"><%= reminderItem.details %></p>
+                    <small><%= reminderItem.rain %></small>
+                </a>
+            <% }); %>
+
+        </div>
+    </div>
+</div>

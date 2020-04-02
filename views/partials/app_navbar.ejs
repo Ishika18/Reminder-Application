@@ -1,21 +1,15 @@
 <!-- bm - navbar for inside reminders application -->
 
-<nav class="navbar d-flex bg-white border-bottom border-dark ">
-  <img src="/imgs/remindr-icon.png" width="60" height="60" class="d-inline-block p-2" alt="">
-  <a class="navbar-brand p-2 text-dark">Remindr</a>
+<nav class="navbar d-flex bg-white border-bottom border-dark d-inline align-items-start align-items-center" style="min-width: 375px">
+    <div class="container-flex align-items-center justify-content-start p=1">
+      <img src="/imgs/remindr-icon.png" width="50" height="50" class="d-inline" alt="">
+      <a class="navbar-brand text-dark d-none d-md-inline">Remindr</a>
+    </div>
 
-  <div class="btn-group btn-group-toggle mr-auto col-10" data-toggle="buttons">
-    <label class="btn navbar-brand text-dark col">
-      <input type="radio" class="" name="options" id="option1" autocomplete="off"> Options
-    </label>
-    <label class="btn navbar-brand text-dark col">
-      <input type="radio" class="" name="options" id="option2" autocomplete="off" onclick=""> Details
-    </label>
-    <label class="btn navbar-brand text-dark col">
-      <input type="radio" class="" name="options" id="option3" autocomplete="off" onclick=""> Edit
-    </label>
-    <label class="btn navbar-brand text-dark col">
-      <input type="radio" class="" name="options" id="option4" autocomplete="off" onclick=""> Create
-    </label>
-  </div>
+    <div class="container-flex mr-auto table-row">
+      <div id="navBarOptions" class="btn navbar-brand text-dark table-row">Options</div>
+      <div id="navBarDetails" class="btn navbar-brand text-dark table-row">Details</div>
+      <div id="navBarEdit" class="btn navbar-brand text-dark table-row">Edit</div>
+      <div id="navBarCreate" class="btn navbar-brand text-dark table-row">Create</div>
+    </div>
 </nav>

@@ -1,13 +1,69 @@
 <!-- bm - large view of a single reminder full details, this will be app landing page, of most recent reminder-->
-<% include ../partials/app_navbar.ejs %>
+<%- include('../partials/app_navbar.ejs'); -%>
 
+<div class="container-flex align-items-start justify-content-center w-100 px-3">
+  <div class="row row-cols-">
+    <%- include('../partials/reminders_sidebar.ejs'); -%>
 
+    <div class="container-flex col p-3">
+      <form class="">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Heading</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Details</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Date</label>
+          <div class="col-sm-10">
+            <input type="date" class="" id="date">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Time</label>
+          <div class="col-sm-10">
+            <input type="time" class="" id="time">
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Tags</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Tag Here
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
 
-<div class="container">
-  <h1 class="page-header">Reminders</h1>
-
-
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
-
 <script rel="app/js" src="/js/single_reminder_ejs.js"></script>
+
+
+<!-- bm - DONT TOUCH - Base for reminder list item-->
+<!--<a href="#" class="list-group-item list-group-item-action mb-2 active border border-dark shadow">-->
+<!--  <div class="d-flex w-100 justify-content-between">-->
+<!--    <h5 class="mb-1">List group item heading</h5>-->
+<!--    <small>3 days ago</small>-->
+<!--  </div>-->
+<!--  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>-->
+<!--  <small>Donec id elit non mi porta.</small>-->
+<!--</a>-->
