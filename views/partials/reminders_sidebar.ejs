@@ -1,0 +1,17 @@
+<!-- bm - listed version of all reminders -->
+<div class="container-flex p-3 col-lg-6 d-none d-lg-block">
+    <div class="list-group">
+
+        <% Object.values(reminders).forEach((reminderItem) => { %>
+            <a href="#" class="list-group-item list-group-item-action mb-2 active border border-dark shadow">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1"><%= reminderItem.heading %></h5>
+                    <small><%= reminderItem.datetime %></small>
+                </div>
+                <p class="mb-1"><%= reminderItem.details %></p>
+                <small><%= reminderItem.rain %></small>
+            </a>
+        <% }); %>
+
+    </div>
+</div>

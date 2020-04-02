@@ -1,25 +1,59 @@
 <!-- bm - create new reminder -->
-<% include ../partials/app_navbar.ejs %>
+<%- include('../partials/app_navbar.ejs'); -%>
 
-<div class="container">
-  <form action="/reminder" method="POST">
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" class="form-control" id="titleInput" placeholder="Title" name="title">
-    </div>
-    <div class="form-group">
-      <label for="description">Description</label>
-      <textarea class="form-control" id="descriptionInput" rows="3" placeholder="Description" name="description"></textarea>
 
-      date and time picker
-      <div class="md-form mx-5 my-5">
-        <input placeholder="Date and Time" type="text" data-open="picker2" class="form-control date-time picker-opener">
-        <input placeholder="Selected date" type="text" id="picker2"  class="form-control time-date-ghost">
-        <input placeholder="Selected time" data-open="picker2" type="text" class="form-control timepicker time-date-ghost">
-      </div>
+<div class="container-flex align-items-start justify-content-center w-100 px-3">
+  <div class="row row-cols-">
+    <%- include('../partials/reminders_sidebar.ejs'); -%>
+
+    <div class="container-flex col p-3">
+      <form class="">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Heading</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Details</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Date</label>
+          <div class="col-sm-10">
+            <input type="date" class="" id="date">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Time</label>
+          <div class="col-sm-10">
+            <input type="time" class="" id="time">
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Tags</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <label class="form-check-label" for="gridCheck1">
+                  Tag Here
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
+  </div>
 </div>
 
 <script rel="app/js" src="/js/create_reminder_ejs.js"></script>
