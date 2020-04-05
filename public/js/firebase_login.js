@@ -31,9 +31,10 @@ function signUp() {
 function realtimeListener() {
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if(firebaseUser) {
+            userEmail = firebaseUser.email;
             // if the user is logged in.
             // get the data from firestore
-            database.collection('users').get().then(snapshot => {
+            database.collection('users').where("email", "==", userEmail).get().then(snapshot => {
                 setUpReminders(snapshot.docs);
             })
             //document.location = "/reminder/single";
