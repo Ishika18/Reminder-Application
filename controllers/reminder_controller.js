@@ -18,17 +18,18 @@ let remindersController = {
   single_reminder: (req, res) => {
     let userId = "randomUserIdCindy";
     if (userId === "randomUserIdCindy") {
-      res.render('reminder/single_reminder', {reminders: Database.randomUserIdCindy.reminders})}
+      res.render('reminder/single_reminder', {reminders: Database.randomUserIdCindy.reminders})
     }
-  
-  delete: (req, res) => {
-    let reminderToFind = req.params.id;
-    let reminderIndex = Database.cindy.reminders.findIndex(function(reminder) {
-      return reminder.id == reminderToFind; 
-    });
-    Database.cindy.reminders.splice(reminderIndex, 1);
-    res.redirect('/reminder');
   },
+  
+  // delete: (req, res) => {
+  //   let reminderToFind = req.params.id;
+  //   let reminderIndex = Database.cindy.reminders.findIndex(function(reminder) {
+  //     return reminder.id == reminderToFind; 
+  //   });
+  //   Database.cindy.reminders.splice(reminderIndex, 1);
+  //   res.redirect('/reminder');
+  // },
 
   // rl darkSky query
   dark_sky: async (req, res) => {
