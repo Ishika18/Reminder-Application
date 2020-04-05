@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Application</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="public/css/style_landing.css"/>
+</head>
+<body id="body">
+    <div class="container">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+            <br>
+              <h4>Reminders</h4>
+              <ul class="nav flex-column droppable">
+                <div class="form-check">
+                  <li class="draggable" draggable="true">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input"  value="">Reminder 1
+                    </label>
+                    <button type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </li>
+                  <li class="draggable" draggable="true">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="">Reminder 2
+                    </label>
+                    <button type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </li>
+                  <li class="draggable" draggable="true">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="">Reminder 3
+                    </label>
+                    <button type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </li>
+                </div>
+              </ul><br>
+              
+            </div>
+          <div class="col-md">
+            <br>
+            <h4>Add Reminders</h4>
+            <div class="input-group mb-4">
+                <input type="text" class="form-control .container-sm" placeholder="New Reminder" aria-label="New Reminder" aria-describedby="basic-addon2">
+                <div class=".input-group-append form-horizontal">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tags</button>
+                    <div class="dropdown-menu" aria-expanded="false">
+                      <a class="dropdown-item" href="#">Tag 1</a>
+                      <div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Tag 2</a>
+                      <div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Tag 3</a>
+                      <div role="separator" class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Tag 4</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"><h3>Description</h3></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            </form>
+            <div id="subTasks">
+              <h3>Subtasks</h3>
+            </div>
+            <div class=".input-group-append form-horizontal">
+              <button id="addButton" class="btn btn-outline-primary" type="button">Add</button>
+            </div>
+          </div>
+      </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDIkicA6DLOcEJBsiZLY1dYDj4ZwJPm7OI",
+        authDomain: "reminder-application-aaa3e.firebaseapp.com",
+        databaseURL: "https://reminder-application-aaa3e.firebaseio.com",
+        projectId: "reminder-application-aaa3e",
+        storageBucket: "reminder-application-aaa3e.appspot.com",
+        messagingSenderId: "916884371168",
+        appId: "1:916884371168:web:6dd600a1862d43a5c04285",
+        measurementId: "G-T008V8S165"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+</script>
+</body>
+</html>

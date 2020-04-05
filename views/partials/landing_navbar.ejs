@@ -1,0 +1,88 @@
+<!-- bm - navbar for landing page-->
+<!-- bm - navbar for inside reminders application -->
+
+<nav class="navbar d-flex bg-white border-bottom border-dark">
+    <img src="/imgs/remindr-icon.png" width="60" height="60" class="d-inline-block p-2" alt="">
+    <a class="navbar-brand p-2 text-dark">Remindr</a>
+    <a class=" btn navbar-brand p-2 ml-auto text-dark" data-toggle="modal" data-target="#loginModal">Login</a>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade border-bottom border-dark" id="loginModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="/imgs/remindr-icon.png" width="60" height="60" class="d-inline-block p-2" alt="">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body border-top border-bottom border-dark">
+        <div class="container">
+          <div class="row">
+            <div class="mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body border rounded border-dark">
+                  <form class="form-signin mt-2">
+
+                    <div class="form-label-group mt-2 p-2">
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus>
+                    </div>
+
+                    <div class="form-label-group mt-2 p-2">
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                    </div>
+
+                    <button class="btn btn-lg btn-light btn-block text-uppercase mt-2" data-dismiss="modal" type="submit" onclick="login()">Sign in</button>
+                    <hr class="">
+                    <button class="btn btn-lg btn-google btn-light btn-block text-uppercase p-3" data-dismiss="modal" type="submit" onclick="googleLogin()">
+                      <img src="/imgs/google-icon.png" width="45" height="45"  class="d-inline-block p-2" alt="">Sign in with Google</button>
+                    <button class="btn btn-lg btn-facebook btn-light btn-block text-uppercase p-3" data-dismiss="modal" type="submit" onclick="facebookLogin()">
+                      <img src="/imgs/facebook-icon.png" width="45" height="45"  class="d-inline-block p-2" alt="">Sign in with Facebook</button>
+                      <div class="card-footer">
+                        <div class="justify-content-center links">
+                          Don't have an account?<button type="button" class="float-right login_btn" onclick="signUp()">Sign Up</button>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SS - firebase configuration. -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+
+<!-- firebase SDK for authentication -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+
+<!-- firebase SDK for firestore -->
+<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDIkicA6DLOcEJBsiZLY1dYDj4ZwJPm7OI",
+    authDomain: "reminder-application-aaa3e.firebaseapp.com",
+    databaseURL: "https://reminder-application-aaa3e.firebaseio.com",
+    projectId: "reminder-application-aaa3e",
+    storageBucket: "reminder-application-aaa3e.appspot.com",
+    messagingSenderId: "916884371168",
+    appId: "1:916884371168:web:6dd600a1862d43a5c04285",
+    measurementId: "G-T008V8S165"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script rel="app/js" src="/js/firebase_login.js"></script>
+<script rel="app/js" src="/js/landing_ejs.js"></script>
