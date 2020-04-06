@@ -18,8 +18,10 @@ let remindersController = {
   single_reminder: (req, res) => {
     let userId = "randomUserIdCindy";
     if (userId === "randomUserIdCindy") {
-      res.render('reminder/single_reminder', {reminders: Database.randomUserIdCindy.reminders})}
+      res.render('reminder/single_reminder', {reminders: Database.randomUserIdCindy.reminders})
     }
+  },
+
   
   delete: (req, res) => {
     let reminderToFind = req.params.id;
