@@ -99,8 +99,26 @@ let remindersController = {
       rainChance[i] = darkData.daily.data[i].precipProbability;
     }
     console.log(rainChance)
-    // write to database, waiting on ejs implementation
-    // res.redirect('/reminder/home');
+
+    // database stuff
+    let today = new Date();
+    let this_year = today.getFullYear();
+    let this_month = today.getMonth();
+    let this_day = today.getDate();
+    let today_unix = new Date(this_year, this_month, this_day).getTime();
+    // unix time for todays year month and day
+    Object.keys(Database.randomUserIdCindy.reminders).forEach((reminder_key) => {
+      //unix time for reminder's year month and day
+      reminder = Database.randomUserIdCindy.reminders[reminder_key]
+      reminder_date_unix = new Date(reminder.datetime[0], reminder.datetime[1]-1, reminder.datetime[2]).getTime()
+      unix_time_difference = reminder_date_unix - today_unix
+      days_from_today = unix_time_difference/86400000
+      // reminder date is from from todays date until one week from today
+      if(days_from_today >= 0 && days_from_today <= 7){
+        reminder.rain = rainChance[days_from_today];
+      }
+    })
+    // not yet functional res.redirect('/reminder/home');
   },
 
   // bm - For Shagun read Firestore database
