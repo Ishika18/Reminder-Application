@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const ejsLayouts = require("express-ejs-layouts");
 const reminderController = require("./controllers/reminder_controller");
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/public"));
 
@@ -23,7 +26,7 @@ app.get("/reminder/create_reminder_page", reminderController.create_reminder_pag
 app.get("/reminder/edit_reminder_page", reminderController.edit_reminder_page);
 
 // rl query darkSky
-app.get("/darkSky", reminderController.dark_sky);
+app.post("/darkSky", reminderController.dark_sky);
 
 // bm create reminder
 app.post("/reminder/create_reminder", reminderController.create_reminder);
