@@ -19,7 +19,7 @@ let remindersController = {
       let reminderToFind = req.params.id;
       let searchResult = Database.cindy.reminders.find(function(reminder) {
         return reminder.id == reminderToFind; // good test question for students what happens if I put ===
-      })
+      });
       if (searchResult != undefined) {
         res.render('reminder/single-reminder', { reminderItem: searchResult })
       } else {
@@ -28,14 +28,27 @@ let remindersController = {
     },
 
   create_reminder: (req, res) => {
+      console.log();
+      let year = parseInt(req.body.date.slice(0,4));
+      let month = parseInt(req.body.date.slice(5,7));
+      let day = parseInt(req.body.date.slice(8,));
+      let hour = req.body.time.slice(0,2);
+      let minute = req.body.time.slice(3,);
+
 
     let reminder = {
-          datetime: [req.body.date, req.body.time],
+          datetime: [year, month, day, hour, minute],
           heading: req.body.heading,
           details: req.body.details,
           tags: [],
-          rain: 30
+          rain: -1
       };
+
+      for(let i = 0; i < req.body.length; i++) {
+          if (res.body[i] === "on") {
+              reminder.tags.push(req.body.key[i])
+          }
+      }
 
     // bm add tag strings to tag list
     for (let i = 0; i < req.body.length; i++) {
@@ -54,7 +67,7 @@ let remindersController = {
     let searchResult = Database.cindy.reminders.find(function(reminder) {
       return reminder.id == reminderToFind; // Why do you think I chose NOT to use === here?
     })
-    res.render('reminder/edit', { reminderItem: searchResult })
+    res.render('reminder/edit', { reminderItem: searchResult });
 
     res.render("reminder/edit_reminder_page", {reminder: Database.randomUserIdCindy.reminders})
   },
@@ -76,7 +89,7 @@ let remindersController = {
       let reminderToFind = req.params.id;
       let reminderIndex = Database.cindy.reminders.findIndex(function(reminder) {
         return reminder.id == reminderToFind;
-      })
+      });
       Database.cindy.reminders.splice(reminderIndex, 1);
 
     },
