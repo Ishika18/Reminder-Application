@@ -79,4 +79,3 @@ let Database = {
 };
 
 module.exports = Database;
-export{Database}
