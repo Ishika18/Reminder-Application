@@ -17,6 +17,9 @@ app.set("view engine", "ejs");
 app.get("/", reminderController.landing_page);
 
 // bm create reminder page
+app.get("/reminder/home", reminderController.create_reminder_page);
+
+// bm create reminder page
 app.get("/reminder/create_reminder_page", reminderController.create_reminder_page);
 
 // bm edit reminder page

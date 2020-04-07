@@ -28,7 +28,7 @@ let remindersController = {
     },
 
   create_reminder: (req, res) => {
-    console.log(req);
+
     let reminder = {
           datetime: [req.body.date, req.body.time],
           heading: req.body.heading,
@@ -36,6 +36,13 @@ let remindersController = {
           tags: [],
           rain: 30
       };
+
+    // bm add tag strings to tag list
+    for (let i = 0; i < req.body.length; i++) {
+        if (req.body[i] === "on") {
+            reminder["tags"].push(i)
+        }
+    }
       Database.randomUserIdCindy.reminders[Date.now()] = reminder;
       res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
     },
@@ -109,7 +116,18 @@ let remindersController = {
         rainChance[i] = darkData.data.daily.data[i].precipProbability;
     }
     console.log(rainChance)
-  }
+  },
+
+  // bm - For Shagun read Firestore database
+    write_firestore: (req, res) => {
+
+    },
+
+    // bm - For Shagun read Firestore database
+    read_firestore: (req, res) => {
+
+    },
+
 };
 
 module.exports = remindersController;
