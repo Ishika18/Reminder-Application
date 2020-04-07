@@ -4,12 +4,35 @@
 
         <% Object.values(reminders).forEach((reminderItem) => { %>
             <a href="#" id="<% reminderItem %>" onclick="selectReminder(this.id)" class="list-group-item list-group-item-action mb-2 border border-dark shadow">
+
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1"><%= reminderItem.heading %></h5>
-                    <small><%= reminderItem.datetime %></small>
+                    <form action="/reminder/delete_reminder" method="post">
+                        <button type="button" class="close float-left d-inline" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </form>
+
+                    <h4 class="mb-1"><%= reminderItem.heading %></h4>
+                    <p><%= reminderItem.datetime[0] %>-<%= reminderItem.datetime[1] %>-<%= reminderItem.datetime[2] %>
+                        <%= reminderItem.datetime[3] %>:<%= reminderItem.datetime[4] %></p>
                 </div>
+
+                <div class="d-flex w-100 float-left">
                 <p class="mb-1"><%= reminderItem.details %></p>
-                <small><%= reminderItem.rain %></small>
+                </div>
+                <div class="d-flex w-100 justify-content-end">
+                    <% for (let i = 0; i < reminderItem.tags.length; i++) {%>
+                            <img class="d-inline ml-2" width="35" height="35" style="" src="/imgs/<%= reminderItem.tags[i] %>.png" alt="">
+                    <% } %>
+                    <% if (reminderItem.rain >= 0.2) {%>
+                        <img class="d-inline ml-2" width="35" height="35" src="/imgs/tag-rain.png" alt="">
+                    <% } else if (reminderItem.rain == -1){ %>
+                        <img class="d-inline ml-2" width="35" height="35" style="opacity: 0.80" src="/imgs/tag-noraindata.png" alt="">
+                    <% } else { %>
+                        <img class="d-inline ml-2" width="35" height="35" style="opacity: 0.25" src="/imgs/tag-rain.png" alt="">
+                    <% } %>
+                </div>
+
             </a>
         <% }); %>
 

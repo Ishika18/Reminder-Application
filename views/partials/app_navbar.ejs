@@ -6,13 +6,18 @@
       <a class="navbar-brand text-dark d-none d-md-inline">Remindr</a>
     </div>
 
-    <div class="container-flex mr-auto table-row">
+    <div class="container-flex row">
         <form action="/darkSky" method="post">
-            <button class="btn navbar-brand text-dark table-row" type="submit">Weather Update</button>
+            <button id="navWeatherUpdate" class="btn navbar-brand text-dark d-inline" type="submit">Weather Update</button>
         </form>
-
-      <div id="navBarOptions" class="btn navbar-brand text-dark table-row">Options</div>
-      <div id="navBarEdit" class="btn navbar-brand text-dark table-row">Edit</div>
-      <div id="navBarCreate" class="btn navbar-brand text-dark table-row">Create</div>
+        <form action="/reminder/home" method="get">
+            <button id="navBarOptions"  class="btn navbar-brand text-dark d-inline" type="submit">Options</button>
+        </form>
+        <form action="/reminder/edit_reminder_page" method="get">
+            <button id="navBarEdit" class="btn navbar-brand text-dark d-inline" type="submit">Edit</button>
+        </form>
+        <form action="/reminder/create_reminder_page" method="get">
+            <button id="navBarCreate" class="btn navbar-brand text-dark d-inline" type="submit">Create</button>
+        </form>
     </div>
 </nav>
