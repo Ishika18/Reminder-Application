@@ -83,7 +83,6 @@ let remindersController = {
 
   // rl darkSky query
   dark_sky: async (req, res) => {
-
     //darkSky query string
     let lat = req.body.lat;
     let long = req.body.long;
