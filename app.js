@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const ejsLayouts = require("express-ejs-layouts");
 const reminderController = require("./controllers/reminder_controller");
+// rl bodyParser makes darkSky querying work, no idea why
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/public"));
 
@@ -26,8 +30,8 @@ app.get("/reminder/create", reminderController.create_reminder);
 app.get("/reminder/edit", reminderController.edit_reminder);
 
 // rl query darkSky
-app.get("/darkSky", reminderController.dark_sky);
+app.post("/darkSky", reminderController.dark_sky);
 
-app.listen(3000, function(){
+app.listen(3000, function () {
   console.log("Server running. Visit: localhost:3000/reminder in your browser 🚀");
 });
