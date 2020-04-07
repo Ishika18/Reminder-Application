@@ -1,4 +1,4 @@
-// bm - Code for create_reminder.ejs
+// bm - Code for create_reminder_page.ejs
 
 
 // bm - Date Time Picker Initialization

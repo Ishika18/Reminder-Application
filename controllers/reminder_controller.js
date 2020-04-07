@@ -3,36 +3,16 @@ const axios = require('axios');
 
 let remindersController = {
 
-  selectReminder: (req, res) => {
-    console.log(req);
-    res.render("reminder/edit_reminder", {reminder: Database.randomUserIdCindy.reminders.req})
-  },
-
   landing_page: (req, res) => {
-    res.render("reminder/landing")
+    res.render("reminder/landing_page")
   },
 
-  create_reminder: (req, res) => {
-    res.render('reminder/create_reminder', {reminders: Database.randomUserIdCindy.reminders})
+  create_reminder_page: (req, res) => {
+    res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
   },
 
-  edit_reminder: (req, res) => {
-    res.render('reminder/edit_reminder', {reminders: Database.randomUserIdCindy.reminders})
-  },
-
-  single_reminder: (req, res) => {
-    let userId = "randomUserIdCindy";
-    if (userId === "randomUserIdCindy") {
-      res.render('reminder/single_reminder', {reminders: Database.randomUserIdCindy.reminders})
-    }
-  },
-
-  list: (req, res) => {
-      res.render('reminder/index', { reminders: Database.cindy.reminders })
-  },
-
-  new: (req, res) => {
-      res.render('reminder/create')
+  edit_reminder_page: (req, res) => {
+    res.render('reminder/edit_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
   },
 
   listOne: (req, res) => {
@@ -47,27 +27,32 @@ let remindersController = {
       }
     },
 
-  create: (req, res) => {
+  create_reminder: (req, res) => {
+    console.log(req);
     let reminder = {
-        id: Database.cindy.reminders.length+1,
-        title: req.body.title,
-        description: req.body.description,
-        completed: false
-      }
-      Database.cindy.reminders.push(reminder);
-      res.redirect('/reminder');
+          datetime: [req.body.date, req.body.time],
+          heading: req.body.heading,
+          details: req.body.details,
+          tags: [req.body],
+          rain: 30
+      };
+      Database.randomUserIdCindy.reminders[Date.now()] = reminder;
+      res.redirect(200, '/reminder/create_reminder_page');
     },
 
-        edit: (req, res) => {
-      let reminderToFind = req.params.id;
-      let searchResult = Database.cindy.reminders.find(function(reminder) {
-        return reminder.id == reminderToFind; // Why do you think I chose NOT to use === here?
-      })
-      res.render('reminder/edit', { reminderItem: searchResult })
+  edit_reminder: (req, res) => {
+    // To get the id of the reminder and render the edit reminder page
 
-    },
+    let reminderToFind = req.params.id;
+    let searchResult = Database.cindy.reminders.find(function(reminder) {
+      return reminder.id == reminderToFind; // Why do you think I chose NOT to use === here?
+    })
+    res.render('reminder/edit', { reminderItem: searchResult })
 
-        update: (req, res) => {
+    res.render("reminder/edit_reminder_page", {reminder: Database.randomUserIdCindy.reminders})
+  },
+
+  update_reminder: (req, res) => {
       let reminderToFind = req.params.id;
       let searchResult = Database.cindy.reminders.find(function(reminder) {
         if(reminder.id == reminderToFind) {
@@ -77,18 +62,17 @@ let remindersController = {
               reminder.completed = req.body.completed == "true"
         }
       });
-      res.redirect('/reminder/' + reminderToFind)
+
     },
 
-        delete: (req, res) => {
+  delete_reminder: (req, res) => {
       let reminderToFind = req.params.id;
       let reminderIndex = Database.cindy.reminders.findIndex(function(reminder) {
         return reminder.id == reminderToFind;
       })
       Database.cindy.reminders.splice(reminderIndex, 1);
-      res.redirect('/reminder');
-    },
 
+    },
 
   // rl darkSky query
   dark_sky: async (req, res) => {
@@ -118,7 +102,7 @@ let remindersController = {
     uri = uri.concat('?units=ca&exclude=minutely,hourly,alerts,flags,currently');
 
     //append 8 days of rain chance as float to array
-    let rainChance = []
+    let rainChance = [];
     const darkData = await axios(uri);
     for(let i = 0; i < 8; i++){
         console.log(darkData.data.daily.data[i].precipProbability);
