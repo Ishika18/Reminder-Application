@@ -9,7 +9,7 @@ let Database = {
         reminders: {
             randomReminder1: {
                 id: 0,
-                datetime: [2020, 3, 31, 12, 30, 0, 0],
+                datetime: [2020, 4, 4, 12, 30, 0, 0],
                 heading: "do weekly shop for food",
                 details: ["make sure to get chocolate"],
                 tags: ["tag-priority", "tag-shop"],
@@ -17,7 +17,7 @@ let Database = {
             },
             randomReminder2: {
                 id: 1,
-                datetime: [2020, 4, 1, 13, 30, 0, 0],
+                datetime: [2020, 4, 7, 13, 30, 0, 0],
                 heading: "get swole",
                 details: [],
                 tags: ["tag-idea"],
@@ -25,7 +25,7 @@ let Database = {
             },
             randomReminder3: {
                 id: 2,
-                datetime: [2020, 4, 3, 9, 30, 0, 0],
+                datetime: [2020, 4, 10, 9, 30, 0, 0],
                 heading: "fix the toilet",
                 details: ["get tape"],
                 tags: ["tag-shop", "tag-fix"],
@@ -33,7 +33,7 @@ let Database = {
             },
             randomReminder4: {
                 id: 3,
-                datetime: [2020, 4, 5, 20, 30, 0, 0],
+                datetime: [2020, 4, 14, 20, 30, 0, 0],
                 heading: "walk the dog and the kids",
                 details: ["find dog"],
                 tags: ["tag-pet", "tag-child"],
