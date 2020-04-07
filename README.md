@@ -2,8 +2,8 @@
 
 ### Plan of Action Chart:
 
-| Members | Sprint 1 | Sprint 2 |
-| ------- | -------- | -------- |
+| Members | Sprint 1 | Sprint 2 | Sprint 3 |
+| ------- | -------- | -------- | -------- |
 | Shagun  | R and D  |  Firebase Authentication / Login / Database| Firebase Authentication / Login / Database |
 | Ronald  | R and D  |  DarkSkyAPI / Backend Development / Database | DarkSkyAPI / Geolocation Itegration |
 | David   | R and D  |  Landing Page Deliverable  |  |
