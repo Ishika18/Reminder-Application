@@ -8,31 +8,35 @@ let Database = {
         password: "cindypassword",
         reminders: {
             randomReminder1: {
+                id: 0,
                 datetime: [2020, 3, 31, 12, 30, 0, 0],
                 heading: "do weekly shop for food",
                 details: ["make sure to get chocolate"],
-                tags: ["priority"],
+                tags: ["tag-priority", "tag-shop"],
                 rain: 50
             },
             randomReminder2: {
+                id: 1,
                 datetime: [2020, 4, 1, 13, 30, 0, 0],
                 heading: "get swole",
                 details: [],
-                tags: ["priority", "physical"],
+                tags: ["tag-idea"],
                 rain: 20,
             },
             randomReminder3: {
+                id: 2,
                 datetime: [2020, 4, 3, 9, 30, 0, 0],
                 heading: "fix the toilet",
-                details: ["look up how to fix toilet", "see if I have duct tape", "use duct tape and newly acquired knowledge to fix toilet"],
-                tags: ["priority", "fix"],
+                details: ["get tape"],
+                tags: ["tag-shop", "tag-fix"],
                 rain: 0,
             },
             randomReminder4: {
+                id: 3,
                 datetime: [2020, 4, 5, 20, 30, 0, 0],
-                heading: "have relaxing walk with dog",
+                heading: "walk the dog and the kids",
                 details: ["find dog"],
-                tags: ["pet", "fix"],
+                tags: ["tag-pet", "tag-child"],
                 rain: -1,
             }
         }
@@ -45,28 +49,28 @@ let Database = {
                 datetime: [2020, 3, 31, 12, 30, 0, 0],
                 heading: "do weekly shop for carrots",
                 details: ["make sure to get snow"],
-                tags: ["priority"],
+                tags: ["tag-priority"],
                 rain: 50
             },
             randomReminder2: {
                 datetime: [2020, 4, 1, 13, 30, 0, 0],
-                heading: "get shredded",
+                heading: "the moose's birthday",
                 details: [],
-                tags: ["priority", "physical"],
+                tags: ["tag-birthday", "tag-dine"],
                 rain: 20,
             },
             randomReminder3: {
                 datetime: [2020, 4, 3, 9, 30, 0, 0],
                 heading: "make yellow snow",
-                details: ["buy lemons", "find snow", "use lemons on snow"],
-                tags: ["idea"],
+                details: ["buy lemons"],
+                tags: ["tag-idea"],
                 rain: 0,
             },
             randomReminder4: {
                 datetime: [2020, 4, 5, 20, 30, 0, 0],
-                heading: "find Elsa",
-                details: ["do not prompt her to sing"],
-                tags: ["social"],
+                heading: "clean the holiday home",
+                details: ["avoid Elsa's singing"],
+                tags: ["tag-clean", "tag-travel"],
                 rain: -1,
             }
         }

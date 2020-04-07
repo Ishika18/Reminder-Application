@@ -13,20 +13,21 @@ app.set("view engine", "ejs");
 
 // Routes start here
 
-// landing page
+// bm landing page
 app.get("/", reminderController.landing_page);
 
-// single reminder
-app.get("/reminder/single", reminderController.single_reminder);
+// bm create reminder page
+app.get("/reminder/create_reminder_page", reminderController.create_reminder_page);
 
-// create a new reminder
-app.get("/reminder/create", reminderController.create_reminder);
-
-// edit a reminder
-app.get("/reminder/edit", reminderController.edit_reminder);
+// bm edit reminder page
+app.get("/reminder/edit_reminder_page", reminderController.edit_reminder_page);
 
 // rl query darkSky
 app.get("/darkSky", reminderController.dark_sky);
+
+// bm create reminder
+app.post("/reminder/create_reminder", reminderController.create_reminder);
+
 
 app.listen(3000, function(){
   console.log("Server running. Visit: localhost:3000/reminder in your browser 🚀");

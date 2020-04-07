@@ -8,27 +8,27 @@
 
 
     <div class="container-flex col p-3">
-      <form class="" action="/reminder/create" method="post">
+      <form class="" action="/reminder/create_reminder" method="POST">
         <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Heading</label>
+          <label for="heading" class="col-sm-2 col-form-label">Heading</label>
           <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputHeading">
+            <input type="text" class="form-control" id="heading">
           </div>
         </div>
         <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Details</label>
+          <label for="details" class="col-sm-2 col-form-label">Details</label>
           <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputDetails">
+            <input type="text" class="form-control" id="details">
           </div>
         </div>
         <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Date</label>
+          <label for="date" class="col-sm-2 col-form-label">Date</label>
           <div class="col-sm-10">
             <input type="date" class="" id="date">
           </div>
         </div>
         <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Time</label>
+          <label for="time" class="col-sm-2 col-form-label">Time</label>
           <div class="col-sm-10">
             <input type="time" class="" id="time">
           </div>
@@ -37,7 +37,8 @@
           <div class="row">
             <legend class="col-form-label col-sm-2 pt-0">Tags</legend>
             <div class="col-sm-10">
-
+              <div class="row">
+              <div class="div col-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="tag-priority">
                 <label class="form-check-label" for="tag-priority">
@@ -68,6 +69,8 @@
                   <img src="/imgs/tag-clean.png" alt="">
                 </label>
               </div>
+              </div>
+                <div class="div col-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="tag-travel">
                 <label class="form-check-label" for="tag-travel">
@@ -98,6 +101,9 @@
                   <img src="/imgs/tag-birthday.png" alt="">
                 </label>
               </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </fieldset>
@@ -112,4 +118,4 @@
   </div>
 </div>
 
-<script rel="app/js" src="/js/create_reminder_ejs.js"></script>
+<script rel="app/js" src="/js/create_reminder_page_ejs.js"></script>

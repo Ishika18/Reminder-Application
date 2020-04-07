@@ -27,4 +27,4 @@ const setUpReminders = (data) => {
             console.log(tags);
         }
     })
-}
+};
