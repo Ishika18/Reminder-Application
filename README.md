@@ -4,11 +4,11 @@
 
 | Members | Sprint 1 | Sprint 2 |
 | ------- | -------- | -------- |
-| Shagun  | R and D  |  Firebase Authentication / Login / Database |
-| Ronald  | R and D  |  DarkSkyAPI / Geolocation Itegration |
-| David   | R and D  |    |
-| Silvana | R and D  | Documentation / Bootstrap Styling |
-| Blake   | R and D  | EJS Production / Server JS / Form POSTING |
+| Shagun  | R and D  |  Firebase Authentication / Login / Database| Firebase Authentication / Login / Database |
+| Ronald  | R and D  |  DarkSkyAPI / Backend Development / Database | DarkSkyAPI / Geolocation Itegration |
+| David   | R and D  |  Landing Page Deliverable  |  |
+| Silvana | R and D  | Landing Page Deliverable | Documentation / Bootstrap Styling |
+| Blake   | R and D  | Code Merger / EJS Production | EJS Production / Server JS / Form POSTING |
 
 [Trello Board](https://trello.com/invite/b/Bf31PkJP/b57518b64f5b2c1cb753b06326ea1366/reminders-application)
 
