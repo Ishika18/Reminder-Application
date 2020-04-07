@@ -33,11 +33,11 @@ let remindersController = {
           datetime: [req.body.date, req.body.time],
           heading: req.body.heading,
           details: req.body.details,
-          tags: [req.body],
+          tags: [],
           rain: 30
       };
       Database.randomUserIdCindy.reminders[Date.now()] = reminder;
-      res.redirect(200, '/reminder/create_reminder_page');
+      res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
     },
 
   edit_reminder: (req, res) => {

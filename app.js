@@ -5,7 +5,7 @@ const reminderController = require("./controllers/reminder_controller");
 
 app.use(express.static(__dirname + "/public"));
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(ejsLayouts);
 
