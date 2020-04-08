@@ -1,5 +1,9 @@
 ## Group 3
 
+## Long Term Goals
+
+**An web application with API support, that allows users to create customizable personal reminders for themselves with integrated weather data.**
+
 ### Plan of Action Chart:
 
 | Members | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 |
@@ -76,7 +80,3 @@
 | David   | HTML / CSS / EJS |
 | Silvana | HTML / CSS / EJS |
 | Blake   | Database Methods / Project Structure |
-
-### Long Term Goals
-
-**An web application with API support, that allows users to create customizable personal reminders for themselves with integrated weather data.**
