@@ -33,6 +33,8 @@ app.post("/darkSky", reminderController.dark_sky);
 // bm create reminder
 app.post("/reminder/create_reminder", reminderController.create_reminder);
 
+// bm delete reminder
+app.get("/reminder/delete_reminder", reminderController.delete_reminder);
 
 app.listen(3000, function(){
   console.log("Server running. Visit: localhost:3000/reminder in your browser 🚀");

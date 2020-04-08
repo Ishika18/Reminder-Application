@@ -3,29 +3,20 @@ const fetch = require('node-fetch');
 
 let remindersController = {
 
+    // bm - direct to landing page
   landing_page: (req, res) => {
     res.render("reminder/landing_page")
   },
 
+    // bm - direct to create a new reminder page
   create_reminder_page: (req, res) => {
     res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
   },
 
+    // bm - direct to edit current reminder page
   edit_reminder_page: (req, res) => {
     res.render('reminder/edit_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
   },
-
-  listOne: (req, res) => {
-      let reminderToFind = req.params.id;
-      let searchResult = Database.cindy.reminders.find(function(reminder) {
-        return reminder.id == reminderToFind; // good test question for students what happens if I put ===
-      });
-      if (searchResult != undefined) {
-        res.render('reminder/single-reminder', { reminderItem: searchResult })
-      } else {
-        res.render('reminder/index', { reminders: Database.cindy.reminders })
-      }
-    },
 
   create_reminder: (req, res) => {
       console.log();
@@ -60,38 +51,27 @@ let remindersController = {
       res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
     },
 
+    // bm - to be implemented
   edit_reminder: (req, res) => {
     // To get the id of the reminder and render the edit reminder page
 
-    let reminderToFind = req.params.id;
-    let searchResult = Database.cindy.reminders.find(function(reminder) {
-      return reminder.id == reminderToFind; // Why do you think I chose NOT to use === here?
-    })
-    res.render('reminder/edit', { reminderItem: searchResult });
-
-    res.render("reminder/edit_reminder_page", {reminder: Database.randomUserIdCindy.reminders})
   },
 
+    // bm - to be implemented
   update_reminder: (req, res) => {
-      let reminderToFind = req.params.id;
-      let searchResult = Database.cindy.reminders.find(function(reminder) {
-        if(reminder.id == reminderToFind) {
-          reminder.title = req.body.title,
-              reminder.description = req.body.description,
-              // Why do you think I had to do req.body.completed == "true" below?
-              reminder.completed = req.body.completed == "true"
-        }
-      });
 
     },
 
+    // bm - does not have full functionality
   delete_reminder: (req, res) => {
+      console.log(req.body);
+      console.log(req.params.id);
+      console.log(req.params);
       let reminderToFind = req.params.id;
-      let reminderIndex = Database.cindy.reminders.findIndex(function(reminder) {
-        return reminder.id == reminderToFind;
+      let reminderIndex = Database.randomUserIdCindy.reminders.findIndex(function(reminder) {
+        return reminder.id === reminderToFind;
       });
-      Database.cindy.reminders.splice(reminderIndex, 1);
-
+      Database.randomUserIdCindy.reminders.splice(reminderIndex, 1);
     },
 
   // rl darkSky query
@@ -107,11 +87,11 @@ let remindersController = {
     //append 8 days of rain chance as float to array
     let rainChance = [];
     const fetchDarkData = await fetch(uri);
-    const darkData = await fetchDarkData.json()
+    const darkData = await fetchDarkData.json();
     for(let i = 0; i < 8; i++){
       rainChance[i] = darkData.daily.data[i].precipProbability;
     }
-    console.log(rainChance)
+    console.log(rainChance);
 
     // database stuff
     let today = new Date();
@@ -122,16 +102,17 @@ let remindersController = {
     // unix time for todays year month and day
     Object.keys(Database.randomUserIdCindy.reminders).forEach((reminder_key) => {
       //unix time for reminder's year month and day
-      reminder = Database.randomUserIdCindy.reminders[reminder_key]
+      reminder = Database.randomUserIdCindy.reminders[reminder_key];
       reminder_date_unix = new Date(reminder.datetime[0], reminder.datetime[1]-1, reminder.datetime[2]).getTime()
-      unix_time_difference = reminder_date_unix - today_unix
-      days_from_today = unix_time_difference/86400000
+      unix_time_difference = reminder_date_unix - today_unix;
+      days_from_today = unix_time_difference/86400000;
       // reminder date is from from todays date until one week from today
       if(days_from_today >= 0 && days_from_today <= 7){
         reminder.rain = rainChance[days_from_today];
       }
-    })
-    res.send("1")
+
+    });
+      res.send("1")
   },
 
   // bm - For Shagun read Firestore database
