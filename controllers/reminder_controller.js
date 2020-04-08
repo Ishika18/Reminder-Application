@@ -131,7 +131,7 @@ let remindersController = {
         reminder.rain = rainChance[days_from_today];
       }
     })
-    // not yet functional res.redirect('/reminder/home');
+    res.send("1")
   },
 
   // bm - For Shagun read Firestore database

@@ -22,5 +22,7 @@ async function setLocation(location) {
         }
     };
     await fetch('/darkSky', options)
+    document.location.reload()
+    
     // rl TODO "".then necessary? I dont think i will be returning res values here. is there something more appropriate than fetch?""
 }
