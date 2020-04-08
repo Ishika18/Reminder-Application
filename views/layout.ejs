@@ -14,6 +14,35 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- SS - firebase configuration. -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+
+    <!-- firebase SDK for authentication -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+
+    <!-- firebase SDK for firestore -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDIkicA6DLOcEJBsiZLY1dYDj4ZwJPm7OI",
+        authDomain: "reminder-application-aaa3e.firebaseapp.com",
+        databaseURL: "https://reminder-application-aaa3e.firebaseio.com",
+        projectId: "reminder-application-aaa3e",
+        storageBucket: "reminder-application-aaa3e.appspot.com",
+        messagingSenderId: "916884371168",
+        appId: "1:916884371168:web:6dd600a1862d43a5c04285",
+        measurementId: "G-T008V8S165"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <script rel="app/js" src="/script.js"></script>
   </body>
 </html>
