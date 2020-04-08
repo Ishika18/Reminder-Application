@@ -26,6 +26,12 @@ function signUp() {
 
     // login the user after creating the id.
     login();
+
+    // add the user to database
+    // if the user is logged in now, add the user information to database
+    if( realtimeListener ) {
+        addUser(id);
+    }
 }
 
 function realtimeListener() {
@@ -38,6 +44,7 @@ function realtimeListener() {
                 setUpReminders(snapshot.docs);
             })
             //document.location = "/reminder/single";
+            return true;
         } else {
             console.log("user not logged in.");
         }
@@ -51,3 +58,44 @@ function logout() {
 }
 
 realtimeListener();
+
+// add the user email to database when the user sign up
+function addUser(userEmail) {
+    database.collection("users").doc(userEmail).set({
+        email: userEmail.toLowerCase(),
+    });
+}
+
+
+// SS - database part
+// function to add a new reminder to database
+function addReminder(heading, datetime, details, tags, rainChance, userEmail) {
+    let userData = database.collection("users").doc(userEmail);
+    let correctDate = true; // will change later (acc to current date)
+    // update the reminder dictionary
+
+    let reminders = {};
+    reminders[heading] = {
+        heading: heading,
+        datetime: datetime,
+        details: details,
+        tags: tags
+    }
+
+    // add rainChance if reminder date < 7 days from current date
+    if (correctDate) {
+        reminders[heading].rain = rainChance;
+    }
+    userData.update({
+        reminders
+    })
+}
+
+heading = "randomReminer";
+datetime = [2020, 3, 31, 12, 30, 0, 0];
+details = ["random detail"];
+rainChance = 30;
+tags = ["priority", "physical"];
+
+userEmail = "randomId@gmail.com"
+addReminder(heading, datetime, details, tags, rainChance, userEmail)

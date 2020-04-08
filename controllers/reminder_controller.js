@@ -1,8 +1,5 @@
 let Database = require("../database");
 const fetch = require('node-fetch');
-const auth = firebase.auth();
-const database = firebase.firestore();
-
 
 let remindersController = {
 
