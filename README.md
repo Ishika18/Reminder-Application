@@ -30,7 +30,7 @@
 | Silvana | Documentaion |
 | Blake   | Licencing / Documentaion |
 
-## ~~Sprint 3 (Tues, March 31) - (Tues, April 7)
+## ~~Sprint 3 (Tues, March 31) - (Tues, April 7)~~
 
 ### Sprint 3 Goals
 
@@ -47,7 +47,7 @@
 | Silvana | Landing Page Deliverable |
 | Blake   | Code Merger / EJS Production |
 
-## ~~Sprint 2 (Tues, March 24) - (Tues, March 31)
+## ~~Sprint 2 (Tues, March 24) - (Tues, March 31)~~
 
 ### Sprint 2 Goals
 
@@ -63,7 +63,7 @@
 | Silvana | Landing Page Deliverable |
 | Blake   | Code Merger / EJS Production |
 
-## ~~Sprint 1 (Tues, March 17) - (Tues, March 24)
+## ~~Sprint 1 (Tues, March 17) - (Tues, March 24)~~
 
 ### Sprint 1 Goals
 
