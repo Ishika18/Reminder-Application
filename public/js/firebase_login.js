@@ -86,15 +86,15 @@ function addReminder(heading, datetime, details, tags, rainChance, userEmail) {
     if (correctDate) {
         reminders[heading].rain = rainChance;
     }
-    userData.update({
+    userData.set({
         reminders
-    })
+    }, {merge: true})
 }
 
 heading = "randomReminer";
 datetime = [2020, 3, 31, 12, 30, 0, 0];
 details = ["random detail"];
-rainChance = 30;
+rainChance = 15;
 tags = ["priority", "physical"];
 
 userEmail = "randomId@gmail.com"

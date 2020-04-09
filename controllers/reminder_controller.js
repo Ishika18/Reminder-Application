@@ -1,5 +1,25 @@
 let Database = require("../database");
+let firebase = require("firebase/app");
 const fetch = require('node-fetch');
+
+// add the fireabse products that you want to use
+require("firebase/auth");
+require("firebase/firebase");
+
+// app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDIkicA6DLOcEJBsiZLY1dYDj4ZwJPm7OI",
+  authDomain: "reminder-application-aaa3e.firebaseapp.com",
+  databaseURL: "https://reminder-application-aaa3e.firebaseio.com",
+  projectId: "reminder-application-aaa3e",
+  storageBucket: "reminder-application-aaa3e.appspot.com",
+  messagingSenderId: "916884371168",
+  appId: "1:916884371168:web:6dd600a1862d43a5c04285",
+  measurementId: "G-T008V8S165"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 let remindersController = {
 
@@ -56,6 +76,7 @@ let remindersController = {
             reminder["tags"].push(i)
         }
     }
+      // bm Shagun write to FS database here
       Database.randomUserIdCindy.reminders[Date.now()] = reminder;
       res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
     },
