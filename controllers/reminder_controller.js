@@ -1,10 +1,10 @@
 let Database = require("../database");
-let firebase = require("firebase/app");
 const fetch = require('node-fetch');
+const firebase = require("firebase/app");
 
 // add the fireabse products that you want to use
 require("firebase/auth");
-require("firebase/firebase");
+require("firebase/firestore");
 
 // app's Firebase configuration
 var firebaseConfig = {
@@ -19,15 +19,21 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+
+
+const auth = firebase.auth();
+const database = firebase.firestore();
 
 let remindersController = {
 
   landing_page: (req, res) => {
-    res.render("reminder/landing_page")
+    //authSstate = ﻿realtimeListener();
+    //req.authsstate
+    res.render("reminder/landing_page", {authSstate: authSstate})
   },
 
   create_reminder_page: (req, res) => {
+
     res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
   },
 
@@ -167,3 +173,21 @@ let remindersController = {
 };
 
 module.exports = remindersController;
+
+function realtimeListener() {
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser) {
+          return true;
+      } else {
+          console.log("user not logged in.");
+          return false;
+      }
+  })
+}
+
+function logInSessionUser() {
+  //console.log(cookies.get('session'))
+}
+
+//logInSessionUser();
+realtimeListener();

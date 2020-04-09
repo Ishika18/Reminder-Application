@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/1c72928e-4ba3-479f-bdb1-1b1fe9bfa8e0/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/RemindrApp",
+    "appService.deploySubpath": ""
+}

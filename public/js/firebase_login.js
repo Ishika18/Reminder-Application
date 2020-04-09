@@ -7,7 +7,13 @@ function login() {
     const id = userId.value;
     const pass = password.value;
     // logic for user login
-    const promise = auth.signInWithEmailAndPassword(id.trim(), pass);
+    const promise = auth.setPersistence(firebase.auth.Auth.Persistence.SESSION).then(function() {
+        return auth.signInWithEmailAndPassword(id.trim(), pass);
+    })
+    .catch(function(error) {
+        console.log(error.code);
+        console.log(error.message);
+    })
     // if their is a user log them in if not catch the error
     promise.catch(e => console.log(e.message));
 
@@ -65,7 +71,6 @@ function addUser(userEmail) {
         email: userEmail.toLowerCase(),
     });
 }
-
 
 // SS - database part
 // function to add a new reminder to database
