@@ -56,7 +56,7 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 
 #### Selected and Imported Icons for tags reminders
 
-- Mainly from https://www.iconfinder.com/
+- Sourced from https://www.iconfinder.com/
 - Icons mainly for tag display.
 
 #### Generated EJS pages
