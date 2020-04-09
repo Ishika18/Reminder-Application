@@ -85,3 +85,6 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 #### Wrote createReminder in reminderController.js
 - Generates a new reminder object to be appended to the user reminder database.
 
+#### Wrote GET/POST requests in app.js.
+- Redirects for landingPage/createReminderPage/editReminderPage
+- createReminder POST receive from a form to create new reminder
