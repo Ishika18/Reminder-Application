@@ -7,7 +7,13 @@ function login() {
     const id = userId.value;
     const pass = password.value;
     // logic for user login
-    const promise = auth.signInWithEmailAndPassword(id.trim(), pass);
+    const promise = auth.setPersistence(firebase.auth.Auth.Persistence.SESSION).then(function() {
+        return auth.signInWithEmailAndPassword(id.trim(), pass);
+    })
+    .catch(function(error) {
+        console.log(error.code);
+        console.log(error.message);
+    })
     // if their is a user log them in if not catch the error
     promise.catch(e => console.log(e.message));
 
@@ -66,7 +72,6 @@ function addUser(userEmail) {
     });
 }
 
-
 // SS - database part
 // function to add a new reminder to database
 function addReminder(heading, datetime, details, tags, rainChance, userEmail) {
@@ -86,15 +91,15 @@ function addReminder(heading, datetime, details, tags, rainChance, userEmail) {
     if (correctDate) {
         reminders[heading].rain = rainChance;
     }
-    userData.update({
+    userData.set({
         reminders
-    })
+    }, {merge: true})
 }
 
 heading = "randomReminer";
 datetime = [2020, 3, 31, 12, 30, 0, 0];
 details = ["random detail"];
-rainChance = 30;
+rainChance = 15;
 tags = ["priority", "physical"];
 
 userEmail = "randomId@gmail.com"
