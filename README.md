@@ -3,12 +3,11 @@
 ## Long Term Goals
 
 **An web application with API support, that allows users to create customizable personal reminders for themselves with integrated weather data.**
-
 ### Plan of Action Chart:
 
 | Members | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 |
 | ------- | -------- | -------- | -------- | -------- |
-| Shagun  | HTML / CSS / Login Methods | Firebase Authentication / Login / Database| Firebase Authentication / Login / Database | Documentaion / Firebase Integration |
+| Shagun  | HTML / CSS / Login Methods | Firebase Authentication / Login / Database| Firebase Authentication / Login / Database | Documentaion |
 | Ronald  | API Implementation / Backend |  DarkSkyAPI / Backend Development / Database | DarkSkyAPI / Geolocation Integration | Documentaion |
 | David   | HTML / CSS / EJS |  Landing Page Deliverable  |  | Documentaion |
 | Silvana | HTML / CSS / EJS | Landing Page Deliverable | Documentation / Bootstrap Styling | Documentaion |
