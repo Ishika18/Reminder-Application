@@ -13,6 +13,7 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 ## Team Member: Ronald Liang
 ### Tasks Worked On:
 #### General
+- Documentation.
 - Researched EJS generally in order to integrate backend with the front end.
 - Researched how code works with url directories and file directories.
 - Assisted in general ideation of front-end, database format.
