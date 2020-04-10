@@ -29,7 +29,7 @@ let remindersController = {
   landing_page: (req, res) => {
     //authSstate = ﻿realtimeListener();
     //req.authsstate
-    res.render("reminder/landing_page", {authSstate: authSstate})
+    res.render("reminder/landing_page")
   },
 
   create_reminder_page: (req, res) => {
