@@ -95,12 +95,3 @@ function addReminder(heading, datetime, details, tags, rainChance, userEmail) {
         reminders
     }, {merge: true})
 }
-
-heading = "randomReminer";
-datetime = [2020, 3, 31, 12, 30, 0, 0];
-details = ["random detail"];
-rainChance = 15;
-tags = ["priority", "physical"];
-
-userEmail = "randomId@gmail.com"
-addReminder(heading, datetime, details, tags, rainChance, userEmail)

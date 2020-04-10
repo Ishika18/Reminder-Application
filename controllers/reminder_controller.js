@@ -163,12 +163,12 @@ let remindersController = {
 
   // bm - For Shagun read Firestore database
   write_firestore: (req, res) => {
-
+    // can't be integrated if the user log in state is not persistant through all the pages.
   },
 
   // bm - For Shagun read Firestore database
   read_firestore: (req, res) => {
-
+    // can't be integrated if the user log in state is not persistant through all the pages.
   }
 };
 
@@ -184,10 +184,3 @@ function realtimeListener() {
       }
   })
 }
-
-function logInSessionUser() {
-  //console.log(cookies.get('session'))
-}
-
-//logInSessionUser();
-realtimeListener();
