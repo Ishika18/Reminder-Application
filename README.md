@@ -24,7 +24,6 @@
 - Add Break down of work documentation
 - Improve current documentation Wiki
 - Include TODO of feature implimentaion into Wiki
-- Merge in Firebase functionality to app
 
 | Members | Sprint 4 |
 | ------- | -------- |
