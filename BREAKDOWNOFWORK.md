@@ -81,7 +81,7 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 #### Created Remindr Logo
 
 - Built in gimp.
-- Used from brand, used in app navbar.
+- Used for branding, used in app navbar and landing navbar.
 
 #### Selected and Imported Icons for tags reminders
 
