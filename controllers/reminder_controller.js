@@ -1,15 +1,41 @@
 let Database = require("../database");
 const fetch = require('node-fetch');
+const firebase = require("firebase/app");
+
+// add the fireabse products that you want to use
+require("firebase/auth");
+require("firebase/firestore");
+
+// app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDIkicA6DLOcEJBsiZLY1dYDj4ZwJPm7OI",
+  authDomain: "reminder-application-aaa3e.firebaseapp.com",
+  databaseURL: "https://reminder-application-aaa3e.firebaseio.com",
+  projectId: "reminder-application-aaa3e",
+  storageBucket: "reminder-application-aaa3e.appspot.com",
+  messagingSenderId: "916884371168",
+  appId: "1:916884371168:web:6dd600a1862d43a5c04285",
+  measurementId: "G-T008V8S165"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+const auth = firebase.auth();
+const database = firebase.firestore();
 
 let remindersController = {
 
     // bm - direct to landing page
   landing_page: (req, res) => {
+    //authSstate = ﻿realtimeListener();
+    //req.authsstate
     res.render("reminder/landing_page")
   },
 
     // bm - direct to create a new reminder page
   create_reminder_page: (req, res) => {
+
     res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
   },
 
@@ -47,6 +73,7 @@ let remindersController = {
             reminder["tags"].push(i)
         }
     }
+      // bm Shagun write to FS database here
       Database.randomUserIdCindy.reminders[Date.now()] = reminder;
       res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
     },
@@ -117,13 +144,24 @@ let remindersController = {
 
   // bm - For Shagun read Firestore database
   write_firestore: (req, res) => {
-
+    // can't be integrated if the user log in state is not persistant through all the pages.
   },
 
   // bm - For Shagun read Firestore database
   read_firestore: (req, res) => {
-
+    // can't be integrated if the user log in state is not persistant through all the pages.
   }
 };
 
 module.exports = remindersController;
+
+function realtimeListener() {
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser) {
+          return true;
+      } else {
+          console.log("user not logged in.");
+          return false;
+      }
+  })
+}
