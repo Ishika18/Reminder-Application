@@ -12,8 +12,36 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 
 ## Team Member: Ronald Liang
 ### Tasks Worked On:
-Task Name: (Ex - Designing Landing Page in Figma)
-Explanation - I spent time learning how to use figma and design a beautiful landing page for our application.
+#### General
+- Researched EJS generally in order to integrate backend with the front end.
+- Researched how code works with url directories and file directories.
+- Assisted in general ideation of front-end, database format.
+
+#### Created project wireframe
+- Researched similar application user interfaces.
+
+#### Resolved Git merge/push conflicts
+- Learned how to use GitBash.
+- Learned how to use VSCode Source control.
+- Learned how to use SourceTree.
+- Monitored git commits to locate sources of error.
+
+#### Implemented HTML5 Geolocation
+- Researched and implemented HTTP client/server data transfer methods.
+
+#### Worked with asynchronous Javascript/HTTP
+- In the context of browser side geolocation communicating with the server and DarkSky API querying.
+- Researched and implemented both Node-Fetch and Axios.
+- Researched and worked with promise handling.
+- Researched and worked with cors method, various headers options, JSON string conversion.
+- Researched PostMan in order to debug HTTP.
+
+#### Implemented DarkSky API querying
+- Signed up for an darkSky account.
+- Researched the JSON data format of the request.
+- Researched how to configure fetch parameters for the API.
+- Reads and writes to a database rather than from the browser.
+- Researched UNIX time conversions in order to calculate reminder dates relative to the current date.
 
 ## Team Member: Silvana Kalliny
 ### Tasks Worked On:
