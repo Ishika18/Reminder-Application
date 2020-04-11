@@ -2,6 +2,42 @@
 
 ## Team Member: Shagun
 ### Tasks Worked On:
+
+#### General
+- Documentation.
+- Researched firebase authentication, realtime database, firebase firestore.
+- Reaserched how to persist the authentication state of the user.
+- Created a database to store user information and their reminders.
+- Made functions to add data to database and edit that data.
+- Made functions to retrieve data.
+
+#### Implemented firebase authentication ( user state doesn't persist if the page changes)
+- Learnt to implement user login with email and password.
+- Integrated the login functionality with the database to retrieve user specific information.
+- Used auth.onAuthStateChanged to get the state of the user.
+- Used auth.Auth.Persistence.SESSION to persist the state of the user.
+
+#### Implemented firebase firestore 
+- Store the user reminders with all the fields.
+- Made functions to edit the reminders.
+- Made functions to add new reminders.
+- For now the data is just console logged in the login page as the auth state doesn't persist.
+
+#### Reaserched about the ejs structure
+- To solve the issue of state persistence, user information and state has to passed on every page that is loaded.
+- A post request should be made to from the landing page to get user information and login state.
+
+#### Researched about good practices of NoSQL database
+- Learnt to make modular data fields.
+- Learnt that user information should be stored seperately to make it easier to loop.
+
+#### Learnt to work with git
+- Learnt to solve merge conflicts
+- Learnt to use VS code source control
+
+#### Familiarised myself with bootstrap4
+- Used bootstarp to make a main page (not used, changed when integrated with Armaan's base)
+
 Task Name: (Ex - Designing Landing Page in Figma)
 Explanation - I spent time learning how to use figma and design a beautiful landing page for our application.
 
