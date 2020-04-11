@@ -82,8 +82,11 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 
 ## Team Member: Silvana Kalliny
 ### Tasks Worked On:
-Task Name: (Ex - Designing Landing Page in Figma)
-Explanation - I spent time learning how to use figma and design a beautiful landing page for our application.
+#### Documentation
+#### Research
+#### Git
+#### Bootstrap
+#### Landing/Promotional Page
 
 ## Team Member: Blake Michalzik
 
