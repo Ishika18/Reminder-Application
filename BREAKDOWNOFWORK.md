@@ -83,10 +83,22 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 ## Team Member: Silvana Kalliny
 ### Tasks Worked On:
 #### Documentation
+- Created and edited wiki pages containing documentation
+
 #### Research
+- Learned about EJS files 
+- Learned how to pull data from databases to ejs pages
+
 #### Git
-#### Bootstrap
+- Learned to use VS code source control
+- 
+
 #### Landing/Promotional Page
+- Learned bootstrap concepts to create promotional/landing page (most was not used in final version of landing page)
+- Made mockups of app UI in figma (not used)
+- Made slides for landing page carousel (not used)
+- Found icons for use on landing page
+
 
 ## Team Member: Blake Michalzik
 
