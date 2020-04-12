@@ -6,7 +6,7 @@
             <a href="#" id="<% reminderItem.id %>" onclick="selectReminder(this.id)" class="list-group-item list-group-item-action mb-2 border border-dark shadow">
 
                 <div class="d-flex w-100 justify-content-between">
-                    <form action="/reminder/delete_reminder" method="GET">
+                    <form action="/reminder/deleteReminder" method="GET">
                         <button type="submit" value="<%= reminderItem.id %>" class="close p-2 float-left d-inline" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

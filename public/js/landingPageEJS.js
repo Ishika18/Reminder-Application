@@ -1,6 +1,6 @@
 // bm - js for landing page
 
-//SS - retrive reminder data from database.
+//SS - retrieve reminder data from database.
 const setUpReminders = (data) => {
     data.forEach(doc => {
         const userData = doc.data();

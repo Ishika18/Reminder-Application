@@ -2,7 +2,7 @@ let Database = require("../database");
 const fetch = require('node-fetch');
 const firebase = require("firebase/app");
 
-// add the fireabse products that you want to use
+// add the firebase products that you want to use
 require("firebase/auth");
 require("firebase/firestore");
 
@@ -28,24 +28,24 @@ const database = firebase.firestore();
 let remindersController = {
 
     // bm - direct to landing page
-  landing_page: (req, res) => {
+  landingPage: (req, res) => {
     //authSstate = ﻿realtimeListener();
     //req.authsstate
-    res.render("reminder/landing_page")
+    res.render("reminder/landingPage")
   },
 
     // bm - direct to create a new reminder page
-  create_reminder_page: (req, res) => {
+  createReminderPage: (req, res) => {
 
-    res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
+    res.render('reminder/createReminderPage', {reminders: Database.randomUserIdCindy.reminders})
   },
 
     // bm - direct to edit current reminder page
-  edit_reminder_page: (req, res) => {
-    res.render('reminder/edit_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
+  editReminderPage: (req, res) => {
+    res.render('reminder/editReminderPage', {reminders: Database.randomUserIdCindy.reminders})
   },
 
-  create_reminder: (req, res) => {
+  createReminder: (req, res) => {
       console.log();
       let year = parseInt(req.body.date.slice(0,4));
       let month = parseInt(req.body.date.slice(5,7));
@@ -76,34 +76,34 @@ let remindersController = {
     }
       // bm Shagun write to FS database here
       Database.randomUserIdCindy.reminders[Date.now()] = reminder;
-      res.render('reminder/create_reminder_page', {reminders: Database.randomUserIdCindy.reminders})
+      res.render('reminder/createReminderPage', {reminders: Database.randomUserIdCindy.reminders})
     },
 
-    // bm - to be implemented
-  edit_reminder: (req, res) => {
+    // bm - to be implemented - edit reminder
+  editReminder: (req, res) => {
     // To get the id of the reminder and render the edit reminder page
 
   },
 
-    // bm - to be implemented
-  update_reminder: (req, res) => {
+    // bm - to be implemented - update firestore database with reminder data
+  updateReminder: (req, res) => {
 
     },
 
-    // bm - does not have full functionality
-  delete_reminder: (req, res) => {
+    // bm - does not have full functionality - commented out to prevent crash
+  deleteReminder: (req, res) => {
       console.log(req.body);
       console.log(req.params.id);
       console.log(req.params);
-      let reminderToFind = req.params.id;
-      let reminderIndex = Database.randomUserIdCindy.reminders.findIndex(function(reminder) {
-        return reminder.id === reminderToFind;
-      });
-      Database.randomUserIdCindy.reminders.splice(reminderIndex, 1);
+      // let reminderToFind = req.params.id;
+      // let reminderIndex = Database.randomUserIdCindy.reminders.findIndex(function(reminder) {
+      //   return reminder.id === reminderToFind;
+      // });
+      // Database.randomUserIdCindy.reminders.splice(reminderIndex, 1);
     },
 
   // rl darkSky query
-  dark_sky: async (req, res) => {
+  darkSky: async (req, res) => {
     //darkSky query string
     let lat = req.body.lat;
     let long = req.body.long;
@@ -130,11 +130,11 @@ let remindersController = {
     // unix time for todays year month and day
     Object.keys(Database.randomUserIdCindy.reminders).forEach((reminder_key) => {
       //unix time for reminder's year month and day
-      reminder = Database.randomUserIdCindy.reminders[reminder_key];
-      reminder_date_unix = new Date(reminder.datetime[0], reminder.datetime[1]-1, reminder.datetime[2]).getTime()
-      unix_time_difference = reminder_date_unix - today_unix;
-      days_from_today = unix_time_difference/86400000;
-      // reminder date is from from todays date until one week from today
+      let reminder = Database.randomUserIdCindy.reminders[reminder_key];
+      let reminder_date_unix = new Date(reminder.datetime[0], reminder.datetime[1]-1, reminder.datetime[2]).getTime();
+      let unix_time_difference = reminder_date_unix - today_unix;
+      let days_from_today = unix_time_difference/86400000;
+      // reminder date is from from today's date until one week from today
       if(days_from_today >= 0 && days_from_today <= 7){
         reminder.rain = rainChance[days_from_today];
       }
@@ -144,12 +144,12 @@ let remindersController = {
   },
 
   // bm - For Shagun read Firestore database
-  write_firestore: (req, res) => {
+  writeFirestore: (req, res) => {
     // can't be integrated if the user log in state is not persistant through all the pages.
   },
 
   // bm - For Shagun read Firestore database
-  read_firestore: (req, res) => {
+  readFirestore: (req, res) => {
     // can't be integrated if the user log in state is not persistant through all the pages.
   }
 };
