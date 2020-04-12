@@ -77,7 +77,7 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 - Signed up for an darkSky account.
 - Researched the JSON data format of the request.
 - Researched how to configure fetch parameters for the API.
-- Reads and writes to a database rather than from the browser.
+- Configured the code to read from and write to a database rather than store data locally.
 - Researched UNIX time conversions in order to calculate reminder dates relative to the current date.
 
 ## Team Member: Silvana Kalliny
