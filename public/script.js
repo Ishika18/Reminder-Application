@@ -1,7 +1,7 @@
 // bm - core script for doing things browser side
 
 // rl Geolocation
-async function get_rain_data(){
+async function getRainData(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(await setLocation);
     } else {

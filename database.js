@@ -1,4 +1,4 @@
-// bm - datetime format = datetime: [year, month, day, hours, minutes, seconds, milliseconds]
+// bm - datetime format = datetime: [year, month, day, hours, minutes]
 // bm - https://www.digitalocean.com/community/tutorials/understanding-date-and-time-in-javascript
 
 let Database = {

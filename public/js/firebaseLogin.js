@@ -13,7 +13,7 @@ function login() {
     .catch(function(error) {
         console.log(error.code);
         console.log(error.message);
-    })
+    });
     // if their is a user log them in if not catch the error
     promise.catch(e => console.log(e.message));
 
@@ -48,7 +48,7 @@ function realtimeListener() {
             // get the data from firestore
             database.collection('users').where("email", "==", userEmail).get().then(snapshot => {
                 setUpReminders(snapshot.docs);
-            })
+            });
             //document.location = "/reminder/single";
             return true;
         } else {
@@ -85,7 +85,7 @@ function addReminder(heading, datetime, details, tags, rainChance, userEmail) {
         datetime: datetime,
         details: details,
         tags: tags
-    }
+    };
 
     // add rainChance if reminder date < 7 days from current date
     if (correctDate) {
