@@ -43,8 +43,20 @@ Explanation - I spent time learning how to use figma and design a beautiful land
 
 ## Team Member: David Wang
 ### Tasks Worked On:
-Task Name: (Ex - Designing Landing Page in Figma)
-Explanation - I spent time learning how to use figma and design a beautiful landing page for our application.
+#### General
+- Documentation (Added how-to guide for working with the program).
+- Assisted with project Trello Board.
+
+#### Research
+- Researched and familiarzied myself with bootstrap4.
+- Researched and familiarized myself with JSON data structure.
+- Researched and familiarized myself with EJS templates.
+- Researched and understand the importance of webservers.
+- Researched and understand the importance of licensing.
+
+#### Git
+- Learned how to use GitBash.
+- Understand Git braching and merging concepts.
 
 ## Team Member: Ronald Liang
 ### Tasks Worked On:
