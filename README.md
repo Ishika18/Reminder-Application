@@ -15,7 +15,9 @@
 
 [Trello Board](https://trello.com/invite/b/Bf31PkJP/b57518b64f5b2c1cb753b06326ea1366/reminders-application)
 
-## CURRENT: Sprint 4 (Tues, April 7) - (Sun, April 12)
+## CURRENT: None
+
+### ~~Sprint 4 (Tues, April 7) - (Sun, April 12)~~
 
 ### Sprint 4 Goals
 
